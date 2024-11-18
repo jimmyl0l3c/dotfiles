@@ -62,21 +62,21 @@ config.color_scheme = 'rose-pine'
 
 config.colors = {
     selection_fg = 'none',
-    selection_bg = '#403d52',
+    selection_bg = '{{ .rosePine.highlightMedium }}',
 
     tab_bar = {
-        background = '#191724',
+        background = '{{ .rosePine.base }}',
         active_tab = {
             bg_color = '#745797',
-            fg_color = '#e0def4',
+            fg_color = '{{ .rosePine.text }}',
             intensity = 'Normal',
         },
         inactive_tab = {
-            bg_color = '#26233a',
+            bg_color = '{{ .rosePine.overlay }}',
             fg_color = '#808080',
         },
         inactive_tab_hover = {
-            bg_color = '#c4a7e7',
+            bg_color = '{{ .rosePine.iris }}',
             fg_color = '#ffffff',
             italic = true,
         },
