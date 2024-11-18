@@ -3,7 +3,11 @@ local wezterm = require('wezterm')
 local config = wezterm.config_builder()
 
 local act = wezterm.action
+
+-- keybinds
 config.keys = {}
+
+{{- if eq .chezmoi.os "windows" }}
 for i = 1, 8 do
   -- F1 through F8 to activate that tab
   table.insert(config.keys, {
@@ -11,9 +15,17 @@ for i = 1, 8 do
     action = act.ActivateTab(i - 1),
   })
 end
+{{- else if eq .chezmoi.os "linux" }}
+for i = 1, 8 do
+  -- F1 through F8 to activate that tab
+  table.insert(config.keys, {
+    key = 'F' .. tostring(i),
+    action = act.ActivateTab(i - 1),
+  })
+end
+{{- end }}
 
--- config.default_prog = { 'C:/Program Files/PowerShell/7/pwsh.ee' }
-
+-- appearance
 config.font = wezterm.font('JetBrains Mono', { weight = 'Regular' })
 config.font_size = 12
 
@@ -56,5 +68,10 @@ config.colors = {
 }
 
 config.window_background_opacity = 1.0
+
+{{- if eq .chezmoi.os "windows" }}
+config.default_prog = { 'C:/Program Files/PowerShell/7/pwsh.ee' }
+config.front_end = 'WebGpu'
+{{- end }}
 
 return config
