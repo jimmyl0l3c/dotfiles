@@ -1,0 +1,21 @@
+(defvar show_mic_volume false)
+
+(defwidget mic_volume []
+  (box :class "volume" :space-evenly false
+    (button :class "volume__mic"
+      :onclick "eww update show_mic_volume=${!show_mic_volume}" "")
+    (revealer :transition "slideleft"
+      :reveal show_mic_volume
+      :duration "350ms"
+      (scale :min 0
+        :max 101
+        :active true
+        :value mic_vol_value
+        :onchange "pactl set-source-volume alsa_input.usb-BurrBrown_from_Texas_Instruments_USB_AUDIO_CODEC-00.analog-stereo {}%"
+      )
+    )
+  )
+)
+
+(defpoll mic_vol_value :interval "1h"
+  "sh ./modules/volume/scripts/get_mic_volume.sh")

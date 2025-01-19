@@ -1,0 +1,17 @@
+(defvar show_date false)
+
+(defwidget time_module []
+  (eventbox :onhover "eww update show_date=true"
+    :onhoverlost "eww update show_date=false"
+    (box :class "time" :space-evenly "false" :orientation "h" :spacing "3"
+      (label :class "time__time" :text clock_time)
+      (revealer :transition "slideleft" :reveal show_date :duration "350ms"
+        (button :class "time__date"
+          :onclick "bash ./scripts/pop.sh calendar" clock_date)
+      )
+    )
+  )
+)
+
+(defpoll clock_time :interval "10s" "date '+%H:%M'")
+(defpoll clock_date :interval "1h" "date '+%b %d, %Y'")

@@ -1,0 +1,22 @@
+@import './styles/colors.scss';
+@import './styles/tooltip_and_menus.scss';
+@import './styles/metrics.scss';
+
+@import './modules/time/styles.scss';
+@import './modules/volume/styles.scss';
+@import './modules/systray/styles.scss';
+@import './modules/workspaces/styles.scss';
+@import './modules/current_window/styles.scss';
+
+* {
+  all: unset; //Unsets everything so you can style everything from scratch
+  font-family: "Jetbrains Mono Nerd Font";
+}
+
+//Global Styles
+.bar {
+  background-color: transparent;
+  border-radius: 0.8rem;
+  color: $dracula-foreground;
+  padding: 10px;
+}

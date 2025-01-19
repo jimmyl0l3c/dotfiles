@@ -1,0 +1,29 @@
+(include "./widgets/side_stuff.yuck")
+
+(include "./modules/workspaces/module.yuck")
+(include "./modules/current_window/module.yuck")
+
+(defwidget bar []
+  (centerbox :orientation "h"
+    (workspaces_module)
+    (current_window_module)
+    (sidestuff)
+  )
+)
+
+(defwindow bar
+  :monitor 1
+  :geometry (geometry :x "0%"
+    :y "0%"
+    :width "100%"
+    :height "10px"
+    :anchor "top center")
+  :stacking "bg"
+  :exclusive true
+  (bar)
+)
+
+; TODO: add power options
+; TODO: add sound device selection?
+; TODO: indicate which monitor a workspace is on
+; TODO: add bar to second monitor

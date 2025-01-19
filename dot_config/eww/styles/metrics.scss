@@ -1,0 +1,19 @@
+.metric {
+  border-radius: 12px;
+  padding: .4rem .9rem;
+  margin-right: .8rem;
+  background-color: rgba($dracula-background, .6);
+}
+
+.metric scale trough highlight {
+  background-color: $dracula-cyan;
+  border-radius: 10px;
+}
+
+.metric scale trough {
+  background-color: $dracula-background;
+  border-radius: 50px;
+  min-height: 3px;
+  min-width: 60px;
+  margin-left: 1rem;
+}

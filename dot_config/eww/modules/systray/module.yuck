@@ -1,0 +1,10 @@
+(defwidget systray_module []
+  (box :class "systray"
+    :space-evenly false
+    (systray :orientation "h"
+      :prepend-new true
+      :spacing 6
+      :icon-size 18
+    )
+  )
+)

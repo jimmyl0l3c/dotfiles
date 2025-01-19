@@ -1,0 +1,21 @@
+(defvar show_main_volume false)
+
+(defwidget main_volume []
+  (box :class "volume" :space-evenly false
+    (button :class "volume__main"
+      :onclick "eww update show_main_volume=${!show_main_volume}" "")
+    (revealer :transition "slideleft"
+      :reveal show_main_volume
+      :duration "350ms"
+      (scale :min 0
+        :max 101
+        :active true
+        :value main_vol_value
+        :onchange "pactl set-sink-volume @DEFAULT_SINK@ {}%"
+      )
+    )
+  )
+)
+
+(defpoll main_vol_value :interval "1h"
+  "sh ./modules/volume/scripts/get_main_volume.sh")

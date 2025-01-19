@@ -1,0 +1,7 @@
+(deflisten window :initial "..." "sh ./modules/current_window/scripts/get_window_title.sh")
+
+(defwidget current_window_module []
+  (box :class "current-window"
+    (label :text "${window}")
+  )
+)

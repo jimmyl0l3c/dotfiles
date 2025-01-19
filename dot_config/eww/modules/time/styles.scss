@@ -1,0 +1,53 @@
+// time
+.time {
+  border-radius: 12px;
+  padding: .4rem .9rem;
+  background-color: rgba($dracula-background, .6);
+}
+
+.time__time {
+}
+
+.time__date {
+  padding-left: .6rem;
+}
+
+// calendar
+.cal {
+  border-radius: 12px;
+  background-color: $dracula-background;
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 18px;
+  font-weight: normal;
+
+  .cal-in {
+    padding: 0px 10px 0px 10px;
+    color: $dracula-purple;
+
+    .cal {
+      &.highlight {
+        padding: 20px;
+      }
+
+      padding: 5px 5px 5px 5px;
+      margin-left: 10px;
+    }
+  }
+}
+
+calendar:selected {
+  color: $dracula-pink;
+}
+
+calendar.header, calendar.highlight {
+  color: $dracula-cyan;
+  font-weight: bold;
+}
+
+calendar.button {
+  color: $dracula-cyan;
+}
+
+calendar:indeterminate {
+  color: $dracula-comment;
+}

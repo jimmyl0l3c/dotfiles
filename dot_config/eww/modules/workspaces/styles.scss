@@ -1,0 +1,20 @@
+.workspace-button:hover {
+  color: $dracula-cyan;
+  border-radius: 12px;
+}
+
+.workspace-entry {
+  padding: .4rem .9rem;
+  background-color: rgba($dracula-background, .6);
+  border-radius: 12px;
+  margin: 0 .25rem;
+}
+
+.occupied {
+  color: $dracula-purple;
+  background-color: rgba($dracula-background, .8);
+}
+
+.current {
+  color: $dracula-pink;
+}
