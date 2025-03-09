@@ -1,12 +1,16 @@
-@import './styles/colors.scss';
+@import './styles/themes/rose-pine.scss';
 @import './styles/tooltip_and_menus.scss';
 @import './styles/metrics.scss';
+@import './styles/buttons.scss';
 
 @import './modules/time/styles.scss';
 @import './modules/volume/styles.scss';
 @import './modules/systray/styles.scss';
 @import './modules/workspaces/styles.scss';
 @import './modules/current_window/styles.scss';
+@import './modules/power_buttons/styles.scss';
+@import './modules/keyboard/styles.scss';
+@import './modules/confirm_dialog/styles.scss';
 
 * {
   all: unset; //Unsets everything so you can style everything from scratch
@@ -16,7 +20,6 @@
 //Global Styles
 .bar {
   background-color: transparent;
-  border-radius: 0.8rem;
-  color: $dracula-foreground;
+  color: $theme-text;
   padding: 10px;
 }

@@ -2,7 +2,7 @@
 .time {
   border-radius: 12px;
   padding: .4rem .9rem;
-  background-color: rgba($dracula-background, .6);
+  background-color: rgba($theme-bg, .6);
 }
 
 .time__time {
@@ -15,14 +15,14 @@
 // calendar
 .cal {
   border-radius: 12px;
-  background-color: $dracula-background;
+  background-color: $theme-popup-bg;
   font-family: JetBrainsMono Nerd Font;
   font-size: 18px;
   font-weight: normal;
 
   .cal-in {
     padding: 0px 10px 0px 10px;
-    color: $dracula-purple;
+    color: $theme-calendar-selected-mon;
 
     .cal {
       &.highlight {
@@ -36,18 +36,23 @@
 }
 
 calendar:selected {
-  color: $dracula-pink;
+  color: $theme-calendar-selected-day;
 }
 
-calendar.header, calendar.highlight {
-  color: $dracula-cyan;
+calendar.header {
+  color: $theme-calendar-btn-text;
+  font-weight: bold;
+}
+
+calendar.highlight {
+  color: $theme-calendar-weekdays;
   font-weight: bold;
 }
 
 calendar.button {
-  color: $dracula-cyan;
+  color: $theme-calendar-btn-arrows;
 }
 
 calendar:indeterminate {
-  color: $dracula-comment;
+  color: $theme-calendar-neighbor-days;
 }

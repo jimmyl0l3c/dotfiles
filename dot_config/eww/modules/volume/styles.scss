@@ -2,7 +2,7 @@
   border-radius: 12px;
   padding: .4rem .6rem;
   margin-right: .8rem;
-  background-color: rgba($dracula-background, .6);
+  background-color: rgba($theme-bg, .6);
 }
 
 .volume__main {
@@ -18,12 +18,12 @@
 }
 
 .volume scale trough highlight {
-  background-color: $dracula-cyan;
+  background-color: $theme-metric-fill;
   border-radius: 10px;
 }
 
 .volume scale trough {
-  background-color: $dracula-background;
+  background-color: $theme-metric-bg;
   border-radius: 50px;
   min-height: 4px;
   min-width: 60px;

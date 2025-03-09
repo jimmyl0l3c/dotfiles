@@ -14,4 +14,4 @@
 )
 
 (defpoll clock_time :interval "10s" "date '+%H:%M'")
-(defpoll clock_date :interval "1h" "date '+%b %d, %Y'")
+(defpoll clock_date :interval "1h" :run-while show_date "date '+%b %d, %Y'")

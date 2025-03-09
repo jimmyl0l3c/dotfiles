@@ -1,5 +1,9 @@
 (defvar show_mic_volume false)
 
+(defpoll mic_vol_value :interval "2s"
+  :run-while show_mic_volume
+  "sh ./modules/volume/scripts/get_mic_volume.sh")
+
 (defwidget mic_volume []
   (box :class "volume" :space-evenly false
     (button :class "volume__mic"
@@ -16,6 +20,3 @@
     )
   )
 )
-
-(defpoll mic_vol_value :interval "1h"
-  "sh ./modules/volume/scripts/get_mic_volume.sh")

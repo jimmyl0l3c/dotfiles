@@ -3,10 +3,13 @@
 (include "./modules/time/module.yuck")
 (include "./modules/volume/module.yuck")
 (include "./modules/systray/module.yuck")
+(include "./modules/power_buttons/module.yuck")
+(include "./modules/keyboard/module.yuck")
 
 (defwidget sidestuff []
   (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
     (systray_module)
+    (keyboard_layout_module)
     (volume_module)
     (metric :label ""
       :value {EWW_RAM.used_mem_perc}
@@ -14,6 +17,7 @@
     (metric :label ""
       :value {round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)}
       :onchange "")
+    (power_buttons_module)
     (time_module)
   )
 )

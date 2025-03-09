@@ -1,5 +1,9 @@
 (defvar show_main_volume false)
 
+(defpoll main_vol_value :interval "2s"
+  :run-while show_main_volume
+  "sh ./modules/volume/scripts/get_main_volume.sh")
+
 (defwidget main_volume []
   (box :class "volume" :space-evenly false
     (button :class "volume__main"
@@ -16,6 +20,3 @@
     )
   )
 )
-
-(defpoll main_vol_value :interval "1h"
-  "sh ./modules/volume/scripts/get_main_volume.sh")

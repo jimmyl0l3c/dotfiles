@@ -1,0 +1,27 @@
+.confirm_dialog {
+  border-radius: 12px;
+  background-color: $theme-popup-bg;
+
+  button {
+    font-weight: bold;
+    color: $theme-popup-bg;
+  }
+}
+
+.confirm_dialog__yes {
+  border-radius: 0 0 0 12px;
+  background-color: $theme-dialog-yes;
+
+  &:hover {
+    background-color: $theme-dialog-yes-hover;
+  }
+}
+
+.confirm_dialog__no {
+  border-radius: 0 0 12px 0;
+  background-color: $theme-dialog-no;
+
+  &:hover {
+    background-color: $theme-dialog-no-hover;
+  }
+}

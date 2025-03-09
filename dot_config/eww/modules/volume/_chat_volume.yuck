@@ -1,5 +1,9 @@
 (defvar show_chat_volume false)
 
+(defpoll chat_vol_value :interval "2s"
+  :run-while show_chat_volume
+  "sh ./modules/volume/scripts/get_chat_volume.sh")
+
 (defwidget chat_volume []
   (box :class "volume" :space-evenly false
     (button :class "volume__chat"
@@ -16,6 +20,3 @@
     )
   )
 )
-
-(defpoll chat_vol_value :interval "1h"
-  "sh ./modules/volume/scripts/get_chat_volume.sh")

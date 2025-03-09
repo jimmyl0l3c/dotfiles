@@ -1,18 +1,18 @@
 tooltip {
   border-radius: 12px;
-  background-color: rgba($dracula-background, .6);
+  background-color: rgba($theme-bg, .6);
 }
 
 menu {
   padding: .4rem .4rem;
   border-radius: 12px;
-  background-color: rgba($dracula-background, .9);
+  background-color: rgba($theme-popup-bg, .9);
 
   separator {
     margin: .4rem 0;
     padding: .1rem 0;
     border-radius: 16px;
-    background-color: $dracula-comment;
+    background-color: $theme-menu-separator;
   }
 }
 
@@ -21,6 +21,6 @@ menuitem {
 
   &:hover {
     border-radius: 12px;
-    background-color: $dracula-selection;
+    background-color: $theme-selection;
   }
 }

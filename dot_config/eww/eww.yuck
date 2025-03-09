@@ -2,6 +2,7 @@
 
 (include "./modules/workspaces/module.yuck")
 (include "./modules/current_window/module.yuck")
+(include "./modules/confirm_dialog/module.yuck")
 
 (defwidget bar []
   (centerbox :orientation "h"
@@ -24,6 +25,7 @@
 )
 
 ; TODO: add power options
+; TODO: add bar to second monitor
 ; TODO: add sound device selection?
 ; TODO: indicate which monitor a workspace is on
-; TODO: add bar to second monitor
+; TODO: update theme
