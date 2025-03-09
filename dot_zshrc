@@ -72,6 +72,7 @@ ZSH_THEME="robbyrussell" # set by `omz`
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
+    aliases
     colored-man-pages
     colorize
     compleat
@@ -84,10 +85,14 @@ plugins=(
     docker
     golang
     tmux
+    keychain
 )
 
 zstyle ':omz:plugins:docker' aliases no
 zstyle ':omz:plugins:git' aliases no
+
+zstyle ':omz:plugins:keychain' agents gpg,ssh
+zstyle ':omz:plugins:keychain' options --quiet --noask --timeout 5
 
 source $ZSH/oh-my-zsh.sh
 
@@ -138,3 +143,7 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 bindkey '^[.' history-search-backward
+
+. "$HOME/.local/bin/env"
+
+eval `ssh-agent -t 5m`
