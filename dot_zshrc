@@ -142,7 +142,7 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-bindkey '^[.' history-search-backward
+bindkey '^[.' insert-last-word
 
 . "$HOME/.local/bin/env"
 
