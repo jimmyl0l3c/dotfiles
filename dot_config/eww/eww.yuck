@@ -25,7 +25,7 @@
 )
 
 (defwidget bar_right []
-  (box :space-evenly false :halign "end"
+  (box :space-evenly false
     (simple_time_module)
   )
 )
@@ -36,7 +36,7 @@
     :y "0%"
     :width "100%"
     :height "10px"
-    :anchor "top center")
+    :anchor "bottom center")
   :stacking "bg"
   :exclusive true
   (bar_right)
