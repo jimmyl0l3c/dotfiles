@@ -1,6 +1,6 @@
 (include "./modules/volume/_main_volume.yuck")
 (include "./modules/volume/_chat_volume.yuck")
-(include "./modules/volume/_mic_volume.yuck")
+; (include "./modules/volume/_mic_volume.yuck")
 
 (defwidget volume_module []
   (box :class "volume_module"
@@ -8,6 +8,6 @@
     :spacing 12
     (main_volume)
     (chat_volume)
-    (mic_volume)
+    ; (mic_volume)
   )
 )

@@ -7,11 +7,17 @@
 
     (box :class "workspaces" :space-evenly false
       (label :text "${workspaces}${current_workspace}" :visible false)
-      (for workspace in workspaces
-        (eventbox :class "workspace-button"
-          :onclick "hyprctl dispatch workspace ${workspace.id}"
-          (box :class "workspace-entry ${workspace.windows > 0 ? "occupied" : "empty"} ${workspace.id == current_workspace ? "current" : ""}"
-            (label :text "${workspace.id}")
+      (box :class "workspace-box" :space-evenly false
+        (for workspace in workspaces
+          (eventbox :class "workspace-button"
+            :onclick "hyprctl dispatch workspace ${workspace.id}"
+            (box :space-evenly false
+              :class "workspace-entry ${workspace.windows > 0 ? "occupied" : "empty"} ${workspace.id == current_workspace ? "current" : ""} ${workspace.id == 5 || workspace.id == 9 ? "w-edge" : ""}"
+              (label :class "w-checkbox ${workspace.id == current_workspace ? "w-checkbox-selected" : ""}"
+                :text "${workspace.windows > 0 ? "󰄯 " : "󰄰 "}"
+              )
+              (label :text "${workspace.id}")
+            )
           )
         )
       )

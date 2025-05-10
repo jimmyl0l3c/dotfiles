@@ -1,20 +1,38 @@
 .workspace-button:hover {
   color: $theme-btn-hover;
-  border-radius: 12px;
+  // border-radius: 12px;
 }
 
 .workspace-entry {
-  padding: .4rem .9rem;
-  background-color: rgba($theme-bg, .6);
-  border-radius: 12px;
-  margin: 0 .25rem;
+  padding: 0.4rem 0.2rem;
+  // background-color: rgba($rp-overlay, 1);
+  // border-radius: 12px;
+  margin: 0 0.25rem;
+}
+
+.w-checkbox {
+  // color: $theme-text;
+}
+
+.w-checkbox-selected {
+  color: $theme-workspace-current;
 }
 
 .occupied {
   color: $theme-workspace-occupied;
-  background-color: rgba($theme-bg, .8);
+  // background-color: rgba($theme-bg, 0.8);
 }
 
 .current {
   color: $theme-workspace-current;
+}
+
+.w-edge {
+  margin-right: 1.5rem;
+}
+
+.workspace-box {
+  border-radius: 12px;
+  background-color: rgba($theme-bg, 1);
+  padding: 0 .4rem;
 }
