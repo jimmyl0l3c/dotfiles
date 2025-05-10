@@ -24,7 +24,24 @@
   (bar)
 )
 
+(defwidget bar_right []
+  (box :space-evenly false :halign "end"
+    (simple_time_module)
+  )
+)
+
+(defwindow bar_right
+  :monitor 0
+  :geometry (geometry :x "0%"
+    :y "0%"
+    :width "100%"
+    :height "10px"
+    :anchor "top center")
+  :stacking "bg"
+  :exclusive true
+  (bar_right)
+)
+
 ; TODO: add power options
-; TODO: add bar to second monitor
 ; TODO: add sound device selection?
 ; TODO: update theme

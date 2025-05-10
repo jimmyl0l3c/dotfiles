@@ -6,5 +6,12 @@
   )
 )
 
+(defwidget simple_time_module []
+  (box :class "time" :space-evenly "false" :orientation "h" :spacing "3"
+    (label :class "time__time" :text clock_time)
+    (label :class "time__date" :text clock_date)
+  )
+)
+
 (defpoll clock_time :interval "10s" "date '+%H:%M'")
 (defpoll clock_date :interval "1h" "date '+%b %d, %Y'")
