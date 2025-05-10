@@ -2,7 +2,7 @@
 .time {
   border-radius: 12px;
   padding: .4rem .9rem;
-  background-color: rgba($theme-bg, .6);
+  background-color: $theme-bg;
 }
 
 .time__time {
@@ -10,6 +10,7 @@
 
 .time__date {
   padding-left: .6rem;
+  color: $theme-date;
 }
 
 // calendar

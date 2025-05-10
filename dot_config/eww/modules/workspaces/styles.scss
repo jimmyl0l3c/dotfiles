@@ -5,7 +5,7 @@
 
 .workspace-entry {
   padding: 0.4rem 0.2rem;
-  // background-color: rgba($rp-overlay, 1);
+  // background-color: $rp-overlay;
   // border-radius: 12px;
   margin: 0 0.25rem;
 }
@@ -33,6 +33,6 @@
 
 .workspace-box {
   border-radius: 12px;
-  background-color: rgba($theme-bg, 1);
+  background-color: $theme-bg;
   padding: 0 .4rem;
 }

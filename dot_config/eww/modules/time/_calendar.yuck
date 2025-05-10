@@ -13,7 +13,7 @@
   :monitor 1
   :geometry (geometry :x "10px"
     :y "5px"
-    :anchor "top right"
+    :anchor "top center"
     :width "270px"
     :height "60px"
   )
