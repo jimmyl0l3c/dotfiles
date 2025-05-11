@@ -1,6 +1,10 @@
 .keyboard_layout {
-  border-radius: 12px;
+  padding: .4rem .4rem;
+}
+
+.keyboard_layout_module {
   padding: .4rem .8rem;
+  border-radius: 12px;
   margin-right: .6rem;
   background-color: rgba($theme-bg, .6);
 }

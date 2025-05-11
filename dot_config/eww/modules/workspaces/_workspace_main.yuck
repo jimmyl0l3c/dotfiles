@@ -19,7 +19,7 @@
 )
 
 (defwidget workspaces_main_module [class]
-  (box :class "workspace-box ${class}" :space-evenly false
+  (box :class "box workspace-box ${class}" :space-evenly false
     (workspaces_main_list)
   )
 )

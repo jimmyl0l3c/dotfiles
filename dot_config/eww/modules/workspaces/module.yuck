@@ -1,23 +1,21 @@
+(include "./widgets/separator.yuck")
+
 (include "./modules/workspaces/_workspace_vertical.yuck")
 (include "./modules/workspaces/_workspace_main.yuck")
 
 (deflisten workspaces_special :initial "[]" "bash ./modules/workspaces/scripts/get_workspaces.sh 10 10")
 (deflisten focused_workspace :initial "1" "bash ./modules/workspaces/scripts/get_focused_workspace.sh")
 
-(defwidget workspace_separator []
-  (box :class "w-separator" :space-evenly false (label :text "󰇙"))
-)
-
 (defwidget workspaces_module []
   (eventbox :onscroll "bash ./modules/workspaces/scripts/change_active_workspace.sh {} ${focused_workspace}"
     :class "workspaces-widget"
 
     (box :class "workspaces" :space-evenly false
-      (box :class "workspace-box" :space-evenly false
+      (box :class "box workspace-box" :space-evenly false
         (workspaces_main_list)
-        (workspace_separator)
+        (separator)
         (workspaces_vertical_list)
-        (workspace_separator)
+        (separator)
         (for workspace in workspaces_special
           (eventbox :class "workspace-button"
             :onclick "hyprctl dispatch workspace ${workspace.id}"

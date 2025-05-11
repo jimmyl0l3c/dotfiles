@@ -33,3 +33,14 @@
 .margin-x {
   margin: 0 .5rem;
 }
+
+.box {
+  border-radius: 12px;
+  background-color: $theme-bg;
+  padding: 0 .4rem;
+}
+
+.separator {
+  padding: 0 .4rem;
+  color: $theme-separator;
+}

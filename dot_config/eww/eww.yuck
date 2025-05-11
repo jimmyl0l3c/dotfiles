@@ -1,4 +1,5 @@
 (include "./widgets/side_stuff.yuck")
+(include "./widgets/separator.yuck")
 
 (include "./modules/workspaces/module.yuck")
 (include "./modules/time/module.yuck")
@@ -28,6 +29,11 @@
   (box :space-evenly false
     (simple_time_module)
     (workspaces_vertical_module :class "margin-x")
+    (box :class "box" :space-evenly false
+      (simple_keyboard_layout_module :class "")
+      (separator)
+      (simple_systray :class "")
+    )
   )
 )
 
@@ -43,6 +49,5 @@
   (bar_right)
 )
 
-; TODO: add power options
+; TODO: add option to disable idle lock
 ; TODO: add sound device selection?
-; TODO: update theme
