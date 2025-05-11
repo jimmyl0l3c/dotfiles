@@ -1,19 +1,29 @@
-(deflisten workspaces :initial "[]" "bash ./modules/workspaces/scripts/get_workspaces.sh")
-(deflisten current_workspace :initial "1" "bash ./modules/workspaces/scripts/get_focused_workspace.sh")
+(include "./modules/workspaces/_workspace_vertical.yuck")
+(include "./modules/workspaces/_workspace_main.yuck")
+
+(deflisten workspaces_special :initial "[]" "bash ./modules/workspaces/scripts/get_workspaces.sh 10 10")
+(deflisten focused_workspace :initial "1" "bash ./modules/workspaces/scripts/get_focused_workspace.sh")
+
+(defwidget workspace_separator []
+  (box :class "w-separator" :space-evenly false (label :text "󰇙"))
+)
 
 (defwidget workspaces_module []
-  (eventbox :onscroll "bash ./modules/workspaces/scripts/change_active_workspace.sh {} ${current_workspace}"
+  (eventbox :onscroll "bash ./modules/workspaces/scripts/change_active_workspace.sh {} ${focused_workspace}"
     :class "workspaces-widget"
 
     (box :class "workspaces" :space-evenly false
-      (label :text "${workspaces}${current_workspace}" :visible false)
       (box :class "workspace-box" :space-evenly false
-        (for workspace in workspaces
+        (workspaces_main_list)
+        (workspace_separator)
+        (workspaces_vertical_list)
+        (workspace_separator)
+        (for workspace in workspaces_special
           (eventbox :class "workspace-button"
             :onclick "hyprctl dispatch workspace ${workspace.id}"
             (box :space-evenly false
-              :class "workspace-entry ${workspace.windows > 0 ? "occupied" : "empty"} ${workspace.id == current_workspace ? "current" : ""} ${workspace.id == 5 || workspace.id == 9 ? "w-edge" : ""}"
-              (label :class "w-checkbox ${workspace.id == current_workspace ? "w-checkbox-selected" : ""}"
+              :class "workspace-entry ${workspace.windows > 0 ? "occupied" : "empty"} ${workspace.id == focused_workspace ? "current" : ""}"
+              (label :class "w-checkbox ${workspace.id == focused_workspace ? "w-checkbox-selected" : ""}"
                 :text "${workspace.windows > 0 ? "󰄯 " : "󰄰 "}"
               )
               (label :text "${workspace.id}")

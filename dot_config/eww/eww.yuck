@@ -27,6 +27,7 @@
 (defwidget bar_right []
   (box :space-evenly false
     (simple_time_module)
+    (workspaces_vertical_module :class "margin-x")
   )
 )
 
