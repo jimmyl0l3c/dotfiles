@@ -1,5 +1,4 @@
 (deflisten workspaces_vertical :initial "[]" "bash ./modules/workspaces/scripts/get_workspaces.sh 6 9")
-(deflisten current_workspace_vertical :initial "6" "bash ./modules/workspaces/scripts/get_active_vertical.sh")
 
 (defwidget workspaces_vertical_list []
   (box :space-evenly false
@@ -7,10 +6,8 @@
       (eventbox :class "workspace-button"
         :onclick "hyprctl dispatch workspace ${workspace.id}"
         (box :space-evenly false
-          :class "workspace-entry ${workspace.windows > 0 ? "occupied" : "empty"} ${workspace.id == current_workspace_vertical ? "current" : ""}"
-          (label :class "w-checkbox ${workspace.id == current_workspace_vertical ? "w-checkbox-selected" : ""}"
-            :text "${workspace.windows > 0 ? "󰄯 " : "󰄰 "}"
-          )
+          :class "workspace-entry ${workspace.windows > 0 ? "occupied" : "empty"} ${workspace.is_active ? "current" : ""}"
+          (label :class "w-checkbox" :text "${workspace.windows > 0 ? "󰄯 " : "󰄰 "}")
           (label :text "${workspace.id}")
         )
       )
