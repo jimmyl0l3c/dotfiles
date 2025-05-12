@@ -21,10 +21,10 @@
             :onclick "hyprctl dispatch workspace ${workspace.id}"
             (box :space-evenly false
               :class "workspace-entry ${workspace.windows > 0 ? "occupied" : "empty"} ${workspace.id == focused_workspace ? "current" : ""}"
-              (label :class "w-checkbox ${workspace.id == focused_workspace ? "w-checkbox-selected" : ""}"
-                :text "${workspace.windows > 0 ? "󰄯 " : "󰄰 "}"
+              (label :class "w-checkbox"
+                :text {workspace.id == focused_workspace ? "󰄳 " : workspace.windows > 0 ? "󰄯 " : "󰄰 "}
               )
-              (label :text "${workspace.id}")
+              (label :text {workspace.id})
             )
           )
         )
