@@ -33,6 +33,8 @@
       (simple_keyboard_layout_module :class "")
       (separator)
       (simple_systray :class "")
+      (separator)
+      (sys_resources_module)
     )
   )
 )

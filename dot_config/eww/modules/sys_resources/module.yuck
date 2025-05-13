@@ -1,0 +1,18 @@
+(defwidget _resource_used [label value ?value_class]
+  (box :orientation "h"
+    :class "resource-used ${value > 90 ? 'resource-nearly-full' : value > 50 ? 'resource-above-half' : ''}"
+    :space-evenly false
+    (box :class "resource-label" label)
+    (box :class "${value_class}" "${value} %")
+  )
+)
+
+(defwidget sys_resources_module []
+  (box :class "sys-resources-module" :space-evenly false
+    (_resource_used :label ""
+      :value {round(EWW_RAM.used_mem_perc, 0 )}
+      :value_class "resource-mr"
+    )
+    (_resource_used :label "" :value {round(EWW_DISK['/'].used_perc, 0)})
+  )
+)
