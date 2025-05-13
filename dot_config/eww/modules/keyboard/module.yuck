@@ -1,6 +1,6 @@
 (deflisten active_keymap :initial "English" "bash ./modules/keyboard/scripts/get_active_layout.sh")
 
-(defwidget simple_keyboard_layout_module [class]
+(defwidget simple_keyboard_layout_module [?class]
   (box :class "keyboard_layout ${class}"
     :space-evenly false
     (label :class "keyboard_layout__icon" :text "󰌌")

@@ -1,17 +1,17 @@
-(include "./modules/volume/module.yuck")
-(include "./modules/systray/module.yuck")
-(include "./modules/power_buttons/module.yuck")
 (include "./modules/keyboard/module.yuck")
+(include "./modules/power_buttons/module.yuck")
+(include "./modules/systray/module.yuck")
 (include "./modules/sys_resources/module.yuck")
+(include "./modules/volume/module.yuck")
 
 
 (defwidget sidestuff []
   (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
     (volume_module)
     (box :class "box" :space-evenly false
-      (simple_keyboard_layout_module :class "")
+      (simple_keyboard_layout_module)
       (separator)
-      (simple_systray :class "")
+      (simple_systray)
       (separator)
       (sys_resources_module)
       (separator)

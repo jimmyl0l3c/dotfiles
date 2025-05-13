@@ -1,4 +1,4 @@
-(defwidget simple_systray [class]
+(defwidget simple_systray [?class]
   (box :class "systray ${class}" :space-evenly false
     (systray :orientation "h"
       :prepend-new true
