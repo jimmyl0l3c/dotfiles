@@ -1,0 +1,12 @@
+.idle-inhibit-module {
+  padding: 0.4rem 0.2rem;
+}
+
+.idle-inhibitor-active {
+  color: $theme-idle-active;
+}
+
+.idle-inhibitor-inactive {
+  color: $theme-idle-inactive;
+  padding: 0.4rem 0.2rem;
+}

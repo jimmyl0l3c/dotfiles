@@ -3,6 +3,7 @@
 (include "./modules/systray/module.yuck")
 (include "./modules/sys_resources/module.yuck")
 (include "./modules/volume/module.yuck")
+(include "./modules/idle_inhibit/module.yuck")
 
 
 (defwidget sidestuff []
@@ -14,6 +15,8 @@
       (simple_systray)
       (separator)
       (sys_resources_module)
+      (separator)
+      (idle_inhibit_module)
       (separator)
       (power_buttons_module)
     )

@@ -1,17 +1,18 @@
-@import './styles/themes/rose-pine.scss';
-@import './styles/tooltip_and_menus.scss';
-@import './styles/metrics.scss';
-@import './styles/buttons.scss';
+@import "./styles/themes/rose-pine.scss";
+@import "./styles/tooltip_and_menus.scss";
+@import "./styles/metrics.scss";
+@import "./styles/buttons.scss";
 
-@import './modules/time/styles.scss';
-@import './modules/volume/styles.scss';
-@import './modules/systray/styles.scss';
-@import './modules/workspaces/styles.scss';
-@import './modules/current_window/styles.scss';
-@import './modules/power_buttons/styles.scss';
-@import './modules/keyboard/styles.scss';
-@import './modules/confirm_dialog/styles.scss';
-@import './modules/sys_resources/styles.scss';
+@import "./modules/time/styles.scss";
+@import "./modules/volume/styles.scss";
+@import "./modules/systray/styles.scss";
+@import "./modules/workspaces/styles.scss";
+@import "./modules/current_window/styles.scss";
+@import "./modules/power_buttons/styles.scss";
+@import "./modules/keyboard/styles.scss";
+@import "./modules/confirm_dialog/styles.scss";
+@import "./modules/sys_resources/styles.scss";
+@import "./modules/idle_inhibit/styles.scss";
 
 * {
   all: unset; //Unsets everything so you can style everything from scratch
@@ -32,16 +33,16 @@
 }
 
 .margin-x {
-  margin: 0 .5rem;
+  margin: 0 0.5rem;
 }
 
 .box {
   border-radius: 12px;
   background-color: $theme-bg;
-  padding: 0 .4rem;
+  padding: 0 0.4rem;
 }
 
 .separator {
-  padding: 0 .4rem;
+  padding: 0 0.4rem;
   color: $theme-separator;
 }

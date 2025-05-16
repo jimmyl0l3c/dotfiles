@@ -1,0 +1,6 @@
+(defvar idle_inhibit_state "inactive")
+
+(defwidget idle_inhibit_module []
+  (button :class "idle-inhibit-module ${idle_inhibit_state == "active" ? "idle-inhibitor-active" : "idle-inhibitor-inactive"}"
+          :onclick "~/.config/eww/modules/idle_inhibit/scripts/idle_inhibit.sh toggle"
+          {idle_inhibit_state == "active" ? " " : " "}))
