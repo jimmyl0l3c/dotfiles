@@ -6,12 +6,6 @@
     compression = 7
     preloadindex = true
 
-[url "git@github.com:jimmyl0l3c/"]
-    insteadOf = "fj:"
-
-[url "git@github.com:"]
-    insteadOf = "gh:"
-
 [status]
     branch = true
     showStash = true
@@ -36,3 +30,10 @@
 
 [commit]
     gpgSign = true
+    template = ~/.config/git/template
+
+[url "git@github.com:jimmyl0l3c/"]
+    insteadOf = "fj:"
+
+[url "git@github.com:"]
+    insteadOf = "gh:"
