@@ -51,5 +51,4 @@
   (bar_right)
 )
 
-; TODO: add option to disable idle lock
 ; TODO: add sound device selection?

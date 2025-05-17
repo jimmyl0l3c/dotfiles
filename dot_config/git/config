@@ -1,0 +1,38 @@
+[user]
+    name = Filip Joska
+    email = filip@joska.dev
+
+[core]
+    compression = 7
+    preloadindex = true
+
+[url "git@github.com:jimmyl0l3c/"]
+    insteadOf = "fj:"
+
+[url "git@github.com:"]
+    insteadOf = "gh:"
+
+[status]
+    branch = true
+    showStash = true
+
+[diff]
+    renames = copies
+
+[push]
+    autoSetupRemote = true
+    default = current
+
+[pull]
+    default = current
+    rebase = true
+
+[rebase]
+    missingCommitsCheck = warn
+
+[pager]
+    branch = false
+    tag = false
+
+[commit]
+    gpgSign = true
